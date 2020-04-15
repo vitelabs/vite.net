@@ -10,7 +10,7 @@
         </b-row>
         <b-row class="__title__wrapper">
           <div class="mx-auto __title_sub">
-            全球首个基于DAG实现智能合约公链
+            {{ $t('slogan') }}
           </div>
         </b-row>
         <b-row class="__landing_img">
@@ -25,25 +25,16 @@
         </b-row>
         <b-row class="__section_content">
           <div class="__title mx-auto">
-            完全去中心化交易所ViteX
+            {{ $t('vitex.title') }}
           </div>
         </b-row>
         <b-row class="__section_content">
-          <div class="__content mx-auto">
-            <p>全球首个基于DAG的完全去中心化交易所，无需KYC，保护个人信息；</p>
-            <p>去中心化治理，交易、挂单、抵押、邀请、上币即挖矿，挖矿可得平台币VX，</p>
-            <p>享受100%交易所手续费分红；社区自主上币，开交易所像开淘宝店一样简单</p>
-            <p>助记词自己保管，资产更安全；链上撮合交易，秒级成交，接近中心化体验；支持跨链，可交易任何币种</p>
-          </div>
+          <div class="__content mx-auto" v-html="$t('vitex.description')" />
         </b-row>
         <b-row class="__section_content">
           <div class="mx-auto __button_group">
-            <b-button class="__button">
-              马上使用
-            </b-button>
-            <b-button class="__button">
-              了解更多
-            </b-button>
+            <a class="btn __button btn-secondary" :href="urls.vitex" target="_blank">{{ $t('vitex.useNow') }}</a>
+            <a class="btn __button btn-secondary" :href="urls.vitexWebsite" target="_blank">{{ $t('vitex.learnMore') }}</a>
           </div>
         </b-row>
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
@@ -55,25 +46,14 @@
           <b-col cols="8" class="__section_content">
             <b-row>
               <div class="__title">
-                Vite APP
+                {{ $t('app.title') }}
               </div>
             </b-row>
-            <b-row class="__content">
-              一款多币种开源手机钱包，只需一组助记词便可以管理多种加密资产
-              内置去中心化交易所ViteX，交易、挖矿更便捷
-              内置DApp丰富，投资娱乐两不误
-              BTC.COM合作钱包，被鱼池、星火矿池、Luxor等矿池联袂推荐
-            </b-row>
+            <b-row class="__content" v-html="$t('app.description')" />
             <b-row class="__button_group">
-              <b-button class="__button">
-                iOS下载
-              </b-button>
-              <b-button class="__button">
-                安卓下载
-              </b-button>
-              <b-button class="__button">
-                了解更多
-              </b-button>
+              <a class="btn __button btn-secondary" :href="urls.ios" target="_blank">{{ $t('app.ios') }}</a>
+              <a class="btn __button btn-secondary" :href="urls.android" target="_blank">{{ $t('app.android') }}</a>
+              <a class="btn __button btn-secondary" :href="urls.appWebsite" target="_blank">{{ $t('app.learnMore') }}</a>
             </b-row>
           </b-col>
           <b-col class="__section_img">
@@ -86,19 +66,15 @@
       <b-container class="position-relative">
         <b-row class="__section_content">
           <div class="__title mx-auto">
-            VitePlus防疫物资溯源平台
+            {{ $t('vitePlus.title') }}
           </div>
         </b-row>
         <b-row class="__section_content">
-          <div class="__content mx-auto">
-            <p>基于Vite技术打造的VitePlus防疫物资溯源平台 ；实现捐赠信息链上全程溯源；从捐款者发布信息到物流运输等环节；所有数据保存在区块链；真实可信 公开透明且不可篡改</p>
-          </div>
+          <div class="__content mx-auto" v-html="$t('vitePlus.description')" />
         </b-row>
         <b-row class="__section_content">
           <div class="mx-auto __button_group">
-            <b-button class="__button">
-              了解更多
-            </b-button>
+            <a class="btn __button btn-secondary" :href="urls.vitePlus" target="_blank">{{ $t('vitePlus.learnMore') }}</a>
           </div>
         </b-row>
         <b-row>
@@ -111,22 +87,18 @@
       <b-container>
         <b-row class="__section_content">
           <div class="__title mx-auto">
-            区块浏览器
+            {{ $t('explorer.title') }}
           </div>
         </b-row>
         <b-row class="__section_content">
-          <div class="__content mx-auto">
-            <p>支持多币种钱包地址，交易，块高，哈希等信息的秒级查询；查询速度快，查询数据准确，功能完善的区块链浏览器</p>
-          </div>
+          <div class="__content mx-auto" v-html="$t('explorer.description')" />
         </b-row>
         <b-row class="__section_content">
           <div class="mx-auto __button_group">
             <b-button class="__button">
-              官方开发
+              <a :href="urls.viteScan" target="_blank">{{ $t('explorer.viteScan') }}</a>
             </b-button>
-            <b-button class="__button">
-              社区开发
-            </b-button>
+            <a class="btn __button btn-secondary" :href="urls.explorer" target="_blank">{{ $t('explorer.official') }}</a>
           </div>
         </b-row>
         <b-row>
@@ -138,20 +110,15 @@
       <b-container class="position-relative">
         <b-row class="__section_content">
           <div class="__title mx-auto">
-            网络钱包
+            {{ $t('webWallet.title') }}
           </div>
         </b-row>
         <b-row class="__section_content">
-          <div class="__content mx-auto">
-            <p>钱包与交易所一体化，在线交易、挖矿更方便</p>
-            <p>多币种开源钱包，只需一组助记词便可以管理多种加密资产</p>
-          </div>
+          <div class="__content mx-auto" v-html="$t('webWallet.description')" />
         </b-row>
         <b-row class="__section_content">
           <div class="mx-auto __button_group">
-            <b-button class="__button">
-              登录钱包
-            </b-button>
+            <a class="btn __button btn-secondary" :href="urls.webWallet">{{ $t('webWallet.loginWebWallet') }}</a>
           </div>
         </b-row>
         <b-row>
@@ -164,19 +131,15 @@
       <b-container class="position-relative">
         <b-row class="__section_content">
           <div class="__title mx-auto">
-            Vite 论坛
+            {{ $t('forum.title') }}
           </div>
         </b-row>
         <b-row class="__section_content">
-          <div class="__content mx-auto">
-            <p>全球用户齐聚，第一时间了解Vite全部动态</p>
-          </div>
+          <div class="__content mx-auto" v-html="$t('forum.description')" />
         </b-row>
         <b-row class="__section_content">
           <div class="mx-auto __button_group">
-            <b-button class="__button">
-              前往论坛
-            </b-button>
+            <a class="btn __button btn-secondary" :href="urls.forum" target="_blank">{{ $t('forum.toForum') }}</a>
           </div>
         </b-row>
         <b-row>
@@ -192,7 +155,23 @@
 import Nav from '@/components/Nav.vue'
 
 export default {
-  components: { Nav }
+  components: { Nav },
+  data () {
+    return {
+      urls: {
+        vitex: 'https://x.vite.net/trade?symbol=VX_BTC-000',
+        vitexWebsite: 'https://vitex.net',
+        ios: 'https://apps.apple.com/us/app/vite-official-hd-wallet/id1437629486',
+        android: 'https://play.google.com/store/apps/details?id=net.vite.wallet',
+        appWebsite: 'https://app.vite.net/',
+        vitePlus: '',
+        explorer: 'https://explorer.vite.net/',
+        viteScan: 'https://vitescan.io/',
+        webWallet: 'https://x.vite.net',
+        forum: 'https://forum.vite.net'
+      }
+    }
+  }
 }
 </script>
 
@@ -302,6 +281,8 @@ export default {
       background-color: #007aff;
       border: none;
       font-weight: 600;
+      color: white;
+      line-height: 54px;
       &:first-child {
         margin-right: 50px;
       }

@@ -11,21 +11,17 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-item v-for="link in links" :key="link.name" :href="link.url" right>
-            {{ link.name }}
+            {{ $t(`nav.${link.name}`) }}
           </b-nav-item>
           <b-nav-item-dropdown class="__lang_select" text="选择语言" right>
-            <b-dropdown-item href="#">
-              EN
-            </b-dropdown-item>
-            <b-dropdown-item href="#">
-              ES
-            </b-dropdown-item>
-            <b-dropdown-item href="#">
-              RU
-            </b-dropdown-item>
-            <b-dropdown-item href="#">
-              FA
-            </b-dropdown-item>
+            <nuxt-link
+              v-for="locale in availableLocales"
+              :key="locale.code"
+              :to="switchLocalePath(locale.code)"
+              class="dropdown-item"
+            >
+              {{ locale.name }}
+            </nuxt-link>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
@@ -38,13 +34,18 @@ export default {
   data () {
     return {
       links: [
-        { name: 'ViteX交易所', url: '#vitex' },
-        { name: 'Vite APP', url: '#vite_app' },
-        { name: 'Vite Plus', url: '#vite_plus' },
-        { name: '区块浏览器', url: '#vite_explorer' },
-        { name: '网页钱包', url: '#vite_web_wallet' },
-        { name: '论坛', url: '#vite_forum' }
+        { name: 'vitex', url: '#vitex' },
+        { name: 'app', url: '#vite_app' },
+        { name: 'vitePlus', url: '#vite_plus' },
+        { name: 'explorer', url: '#vite_explorer' },
+        { name: 'webWallet', url: '#vite_web_wallet' },
+        { name: 'forum', url: '#vite_forum' }
       ]
+    }
+  },
+  computed: {
+    availableLocales () {
+      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
     }
   }
 }
