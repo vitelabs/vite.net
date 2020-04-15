@@ -1,30 +1,44 @@
 <template>
   <div>
     <div class="landing__home">
-      <b-navbar toggleable="lg"  variant="faded">
-        <b-navbar-brand href="#">NavBar</b-navbar-brand>
+      <b-navbar toggleable="lg" variant="faded">
+        <b-navbar-brand href="#">
+          NavBar
+        </b-navbar-brand>
 
-        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+        <b-navbar-toggle target="nav-collapse" />
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <b-nav-item href="#">Link</b-nav-item>
+            <b-nav-item href="#">
+              Link
+            </b-nav-item>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
             <b-nav-item-dropdown text="Lang" right>
-              <b-dropdown-item href="#">EN</b-dropdown-item>
-              <b-dropdown-item href="#">ES</b-dropdown-item>
-              <b-dropdown-item href="#">RU</b-dropdown-item>
-              <b-dropdown-item href="#">FA</b-dropdown-item>
+              <b-dropdown-item href="#">
+                EN
+              </b-dropdown-item>
+              <b-dropdown-item href="#">
+                ES
+              </b-dropdown-item>
+              <b-dropdown-item href="#">
+                RU
+              </b-dropdown-item>
+              <b-dropdown-item href="#">
+                FA
+              </b-dropdown-item>
             </b-nav-item-dropdown>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
       <b-container>
         <b-row class="__title__wrapper">
-          <div class="mx-auto __title">Vite</div>
+          <div class="mx-auto __title">
+            Vite
+          </div>
         </b-row>
         <b-row class="__title__wrapper">
           <div class="mx-auto __title_sub">
@@ -32,14 +46,14 @@
           </div>
         </b-row>
         <b-row class="__landing_img">
-          <img src="@/assets/images/landing_vite@2x.png"/>
+          <img src="@/assets/images/landing_vite@2x.png">
         </b-row>
       </b-container>
     </div>
     <div class="landing__section vitex">
       <b-container>
         <b-row>
-          <img class="mx-auto section__img img-fluid" src="@/assets/images/vitex@2x.png"/>
+          <img class="mx-auto section__img img-fluid" src="@/assets/images/vitex@2x.png">
         </b-row>
         <b-row class="__section_content">
           <div class="__title mx-auto">
@@ -56,8 +70,12 @@
         </b-row>
         <b-row class="__section_content">
           <div class="mx-auto __button_group">
-            <b-button class="__button">马上使用</b-button>
-            <b-button class="__button">了解更多</b-button>
+            <b-button class="__button">
+              马上使用
+            </b-button>
+            <b-button class="__button">
+              了解更多
+            </b-button>
           </div>
         </b-row>
       </b-container>
@@ -67,7 +85,9 @@
         <b-row>
           <b-col cols="8" class="__section_content">
             <b-row>
-              <div class="__title">Vite APP</div>
+              <div class="__title">
+                Vite APP
+              </div>
             </b-row>
             <b-row class="__content">
               一款多币种开源手机钱包，只需一组助记词便可以管理多种加密资产
@@ -76,9 +96,15 @@
               BTC.COM合作钱包，被鱼池、星火矿池、Luxor等矿池联袂推荐
             </b-row>
             <b-row class="__button_group">
-              <b-button class="__button">iOS下载</b-button>
-              <b-button class="__button">安卓下载</b-button>
-              <b-button class="__button">了解更多</b-button>
+              <b-button class="__button">
+                iOS下载
+              </b-button>
+              <b-button class="__button">
+                安卓下载
+              </b-button>
+              <b-button class="__button">
+                了解更多
+              </b-button>
             </b-row>
           </b-col>
           <b-col class="__section_img">
@@ -101,11 +127,13 @@
         </b-row>
         <b-row class="__section_content">
           <div class="mx-auto __button_group">
-            <b-button class="__button">了解更多</b-button>
+            <b-button class="__button">
+              了解更多
+            </b-button>
           </div>
         </b-row>
         <b-row>
-          <img class="mx-auto section__img img-fluid" src="@/assets/images/vite_plus@2x.png"/>
+          <img class="mx-auto section__img img-fluid" src="@/assets/images/vite_plus@2x.png">
         </b-row>
         <img class="block_img" src="@/assets/images/block@2x.png" alt="">
       </b-container>
@@ -124,12 +152,16 @@
         </b-row>
         <b-row class="__section_content">
           <div class="mx-auto __button_group">
-            <b-button class="__button">官方开发</b-button>
-            <b-button class="__button">社区开发</b-button>
+            <b-button class="__button">
+              官方开发
+            </b-button>
+            <b-button class="__button">
+              社区开发
+            </b-button>
           </div>
         </b-row>
         <b-row>
-          <img class="mx-auto section__img img-fluid" src="@/assets/images/explorer@2x.png"/>
+          <img class="mx-auto section__img img-fluid" src="@/assets/images/explorer@2x.png">
         </b-row>
       </b-container>
     </div>
@@ -148,11 +180,13 @@
         </b-row>
         <b-row class="__section_content">
           <div class="mx-auto __button_group">
-            <b-button class="__button">登录钱包</b-button>
+            <b-button class="__button">
+              登录钱包
+            </b-button>
           </div>
         </b-row>
         <b-row>
-          <img class="mx-auto section__img img-fluid" src="@/assets/images/web_wallet@2x.png"/>
+          <img class="mx-auto section__img img-fluid" src="@/assets/images/web_wallet@2x.png">
         </b-row>
         <img class="block_img" src="@/assets/images/block@2x.png" alt="">
       </b-container>
@@ -171,11 +205,13 @@
         </b-row>
         <b-row class="__section_content">
           <div class="mx-auto __button_group">
-            <b-button class="__button">前往论坛</b-button>
+            <b-button class="__button">
+              前往论坛
+            </b-button>
           </div>
         </b-row>
         <b-row>
-          <img class="mx-auto section__img img-fluid" src="@/assets/images/forum@2x.png"/>
+          <img class="mx-auto section__img img-fluid" src="@/assets/images/forum@2x.png">
         </b-row>
         <img class="block_img" src="@/assets/images/block@2x.png" alt="">
       </b-container>
