@@ -1,7 +1,7 @@
 <template>
   <div>
     <nuxt />
-    <Footer></Footer>
+    <Footer />
   </div>
 </template>
 
