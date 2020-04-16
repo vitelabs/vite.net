@@ -164,7 +164,7 @@ export default {
         ios: 'https://apps.apple.com/us/app/vite-official-hd-wallet/id1437629486',
         android: 'https://play.google.com/store/apps/details?id=net.vite.wallet',
         appWebsite: 'https://app.vite.net/',
-        vitePlus: '',
+        vitePlus: 'https://donation.viteplus.net/',
         explorer: 'https://explorer.vite.net/',
         viteScan: 'https://vitescan.io/',
         webWallet: 'https://x.vite.net',
