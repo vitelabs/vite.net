@@ -13,16 +13,16 @@
             {{ $t('slogan') }}
           </div>
         </b-row>
-        <b-row class="__landing_img">
+        <div class="__landing_img">
           <img src="@/assets/images/landing_vite@2x.png">
-        </b-row>
+        </div>
       </b-container>
     </div>
     <div id="vitex" class="landing__section vitex">
       <b-container class="position-relative">
-        <b-row>
+        <div class="text-center">
           <img class="mx-auto section__img img-fluid" src="@/assets/images/vitex@2x.png">
-        </b-row>
+        </div>
         <b-row class="__section_content">
           <div class="__title mx-auto">
             {{ $t('vitex.title') }}
@@ -77,9 +77,9 @@
             <a class="btn __button btn-secondary" :href="urls.vitePlus" target="_blank">{{ $t('vitePlus.learnMore') }}</a>
           </div>
         </b-row>
-        <b-row>
+        <div class="text-center">
           <img class="mx-auto section__img img-fluid" src="@/assets/images/vite_plus@2x.png">
-        </b-row>
+        </div>
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
       </b-container>
     </div>
@@ -101,9 +101,9 @@
             <a class="btn __button btn-secondary" :href="urls.explorer" target="_blank">{{ $t('explorer.official') }}</a>
           </div>
         </b-row>
-        <b-row>
+        <div class="text-center">
           <img class="mx-auto section__img img-fluid" src="@/assets/images/explorer@2x.png">
-        </b-row>
+        </div>
       </b-container>
     </div>
     <div id="vite_web_wallet" class="landing__section vite_web_wallet">
@@ -121,9 +121,9 @@
             <a class="btn __button btn-secondary" :href="urls.webWallet">{{ $t('webWallet.loginWebWallet') }}</a>
           </div>
         </b-row>
-        <b-row>
+        <div class="text-center">
           <img class="mx-auto section__img img-fluid" src="@/assets/images/web_wallet@2x.png">
-        </b-row>
+        </div>
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
       </b-container>
     </div>
@@ -142,9 +142,9 @@
             <a class="btn __button btn-secondary" :href="urls.forum" target="_blank">{{ $t('forum.toForum') }}</a>
           </div>
         </b-row>
-        <b-row>
+        <div class="text-center">
           <img class="mx-auto section__img img-fluid" src="@/assets/images/forum@2x.png">
-        </b-row>
+        </div>
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
       </b-container>
     </div>
