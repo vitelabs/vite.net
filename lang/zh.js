@@ -1,4 +1,8 @@
 export default {
+  title: 'Vite - 全球首个基于DAG实现智能合约公链',
+  meta: {
+    description: '全球首个基于DAG实现智能合约公链'
+  },
   nav: {
     vitex: 'ViteX 交易所',
     app: 'Vite App',

@@ -1,4 +1,44 @@
-@import 'bootstrap/scss/bootstrap.scss';
+// @import 'bootstrap/scss/bootstrap.scss';
+
+// Add custom bootstrap scss
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/_mixins";
+@import "bootstrap/scss/_root";
+@import "bootstrap/scss/_reboot";
+@import "bootstrap/scss/_type";
+@import "bootstrap/scss/_images";
+// @import "code";
+@import "bootstrap/scss/_grid";
+// @import "tables";
+// @import "forms";
+@import "bootstrap/scss/_buttons";
+// @import "transitions";
+@import "bootstrap/scss/_dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "input-group";
+// @import "custom-forms";
+@import "bootstrap/scss/_nav";
+@import "bootstrap/scss/_navbar";
+// @import "card";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "jumbotron";
+// @import "alert";
+// @import "progress";
+// @import "media";
+// @import "list-group";
+// @import "close";
+// @import "toasts";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "spinners";
+@import "bootstrap/scss/_utilities";
+// @import "print";
+
 @import 'bootstrap-vue/src/index.scss';
 
 $enable-responsive-font-sizes: true;

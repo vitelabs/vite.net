@@ -5,7 +5,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Vite',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,7 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
-    "@/assets/css/global.scss"
+    '@/assets/css/global.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -47,7 +47,11 @@ export default {
     // '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    ['@nuxtjs/pwa', {
+      icon: true,
+      workbox: false
+    }]
   ],
   /*
   ** Axios module configuration
@@ -66,6 +70,11 @@ export default {
     }
   },
   bootstrapVue: {
+    componentPlugins: [
+      'LayoutPlugin',
+      'NavbarPlugin'
+    ],
+    directivePlugins: [],
     bootstrapCSS: false, // Or `css: false`
     bootstrapVueCSS: false // Or `bvCSS: false`
   },
@@ -89,6 +98,11 @@ export default {
     langDir: 'lang/',
     vueI18n: {
       fallbackLocale: 'en'
+    }
+  },
+  pwa: {
+    meta: {
+      /* meta options */
     }
   }
 }
