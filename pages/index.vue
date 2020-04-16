@@ -43,7 +43,7 @@
     <div id="vite_app" class="landing__section vite_app">
       <b-container>
         <b-row>
-          <b-col cols="8" class="__section_content">
+          <b-col md="8" xs="12" sm="12" class="__section_content">
             <b-row>
               <div class="__title">
                 {{ $t('app.title') }}
@@ -56,7 +56,7 @@
               <a class="btn __button btn-secondary" :href="urls.appWebsite" target="_blank">{{ $t('app.learnMore') }}</a>
             </b-row>
           </b-col>
-          <b-col class="__section_img">
+          <b-col md="auto" xs="12" sm="12" class="__section_img">
             <img class="img-fluid" src="@/assets/images/wallet@2x.png" alt="Vite Wallet">
           </b-col>
         </b-row>
@@ -179,7 +179,7 @@ export default {
 @import "~assets/css/vars.scss";
 
 .landing__home {
-  min-height: 1425px;
+  min-height: 500px;
   background-image: url("~assets/images/top_blue@2x.png");
   background-size: cover;
   background-position-y: bottom;
@@ -272,29 +272,46 @@ export default {
       bottom: 161px;
     }
   }
+  .section__img {
+    max-width: 100%;
+    @include media-breakpoint-up(lg) {
+      max-width: 700px;
+    }
+  }
+  .__section_content {
+    .__title, .__content {
+      padding-left: 15px;
+      padding-right: 15px;
+      @include media-breakpoint-up(lg) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
   .__button_group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
     .__button {
       height: 54px;
       box-shadow: 0px 8px 34px 0px rgba(0, 122, 255, 0.2);
       border-radius: 5px;
-      padding: 0 53px;
+      padding: 0 30px;
       background-color: #007aff;
       border: none;
       font-weight: 600;
       color: white;
       line-height: 54px;
-      &:first-child {
-        margin-right: 50px;
-      }
-      &:last-child {
-        margin-right: 0;
+    }
+    @include media-breakpoint-up(md) {
+      .__button {
+        padding: 0 53px;
       }
     }
-  }
-  .section__img {
-    max-width: 100%;
     @include media-breakpoint-up(lg) {
-      max-width: 700px;
+      width: 700px;
     }
   }
   &.vitex,
@@ -343,18 +360,36 @@ export default {
     }
   }
   &.vite_explorer {
-    padding-bottom: 296px;
-    padding-top: 350px;
+    background-image: url(~assets/images/center_blue@2x.png);
+    background-size: cover;
+    background-color: #007aff;
+    padding-top: 30px;
+    padding-bottom: 30px;
     .section__img {
       margin-top: 120px;
     }
     .__section_content {
+      .__title, .__content {
+        color: white;
+      }
       .__button_group {
         .__button {
           background: rgba(255, 255, 255, 1);
           color: #007aff;
         }
       }
+    }
+    @include media-breakpoint-up(md) {
+      padding-bottom: 296px;
+      padding-top: 450px;
+      background-color: transparent;
+      margin-top: -230px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 296px;
+      padding-top: 350px;
+      background-color: transparent;
+      margin-top: 0;
     }
   }
   &.vite_web_wallet {
@@ -364,10 +399,14 @@ export default {
     .section__img {
       margin-top: 120px;
     }
+    padding-top: 30px;
+    @include media-breakpoint-up(md) {
+      padding-top: 0;
+    }
   }
   &.vite_forum {
-    padding-top: 366px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 30px;
     background-image: url("~assets/images/footer_blue@2x.png");
     background-size: cover;
     .__section_content {
@@ -385,6 +424,10 @@ export default {
     .section__img {
       margin-top: 120px;
     }
+    @include media-breakpoint-up(md) {
+      padding-top: 366px;
+      padding-bottom: 150px;
+    }
   }
   &.vite_app {
     background-color: #007aff;
@@ -392,7 +435,6 @@ export default {
     .__section_content {
       padding-top: 127px;
       padding-bottom: 127px;
-      padding-right: 95px;
       .__title {
         margin-bottom: 40px;
         font-size: 32px;
@@ -404,18 +446,21 @@ export default {
         margin-bottom: 50px;
       }
       .__button_group {
+        justify-content: space-around;
+        width: auto;
         .__button {
           background: rgba(255, 255, 255, 1);
           color: #007aff;
+          margin-top: 15px;
         }
       }
     }
     .__section_img {
-      width: 380px;
       img {
         width: 100%;
       }
     }
+    margin-top: 30px;
     @include media-breakpoint-up(md) {
       margin-top: 50px;
       .__section_content {
@@ -427,6 +472,7 @@ export default {
         }
       }
       .__section_img {
+        width: 380px;
         img {
           margin-top: 120px;
         }
@@ -437,6 +483,11 @@ export default {
       .__section_img {
         img {
           margin-top: -100px;
+        }
+      }
+      .__section_content {
+        .__button_group {
+          justify-content: space-between;
         }
       }
     }

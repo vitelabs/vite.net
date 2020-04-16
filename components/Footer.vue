@@ -2,16 +2,16 @@
   <div class="__footer_section">
     <b-container>
       <b-row>
-        <b-col>
+        <b-col sm="12" xs="12" md="12" lg="6" class="__logo_wrapper">
           <img src="@/assets/images/logo@2x.png" class="__logo" alt="Vite Logo">
         </b-col>
-        <b-col>
+        <b-col sm="12" xs="12" md="12" lg="6" class="__url_wrapper">
           <a v-for="item in urlList" :key="item.name" :href="item.url">
             <icon :name="item.name" />
           </a>
         </b-col>
       </b-row>
-      <b-row class="copy_right text-right">
+      <b-row class="copy_right">
         <b-col>
           © 2020 VITE Labs. All Rights Reserved.
         </b-col>
@@ -44,9 +44,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/css/vars.scss";
+
 .__footer_section {
   padding-top: 35px;
   background-color: #006fe9;
+  .__logo_wrapper {
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
   .__logo {
     width: 108px;
   }
@@ -58,6 +66,22 @@ export default {
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
+    @include media-breakpoint-up(md) {
+      text-align: right;
+    }
+  }
+  .__url_wrapper {
+    text-align: center;
+    margin-top: 20px;
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
+  }
+  ::v-deep .__icon {
+    width: 40px;
+    @include media-breakpoint-up(md) {
+      width: 60px;
+    }
   }
 }
 </style>
