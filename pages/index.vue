@@ -1,59 +1,79 @@
 <template>
   <div>
-    <div id="home" class="landing__home">
+    <div id="home" class="landing">
       <Nav />
       <b-container>
-        <b-row class="__title__wrapper">
-          <div class="mx-auto __title">
+        <b-row class="slogan">
+          <div class="mx-auto slogan__title">
             Vite
           </div>
         </b-row>
-        <b-row class="__title__wrapper">
-          <div class="mx-auto __title_sub">
+        <b-row class="slogan">
+          <div class="mx-auto slogan__title-sub">
             {{ $t('slogan') }}
           </div>
         </b-row>
-        <div class="__landing_img">
+        <div class="landing__img">
           <img src="@/assets/images/landing_vite@2x.png">
         </div>
       </b-container>
     </div>
-    <div id="vitex" class="landing__section vitex">
+    <div id="vitex" class="landing-section vitex">
       <b-container class="position-relative">
         <div class="text-center">
           <img class="mx-auto section__img img-fluid" src="@/assets/images/vitex@2x.png">
         </div>
-        <b-row class="__section_content">
-          <div class="__title mx-auto">
+        <b-row class="section-content">
+          <div class="section-content__title mx-auto">
             {{ $t('vitex.title') }}
           </div>
         </b-row>
-        <b-row class="__section_content">
-          <div class="__content mx-auto" v-html="$t('vitex.description')" />
+        <b-row class="section-content">
+          <div class="section-content__content mx-auto" v-html="$t('vitex.description')" />
         </b-row>
-        <b-row class="__section_content">
-          <div class="mx-auto __button_group">
-            <a class="btn __button btn-secondary" :href="urls.vitex" target="_blank">{{ $t('vitex.useNow') }}</a>
-            <a class="btn __button btn-secondary" :href="urls.vitexWebsite" target="_blank">{{ $t('vitex.learnMore') }}</a>
+        <b-row class="section-content">
+          <div class="mx-auto button-group">
+            <a
+              class="btn button-group__button btn-secondary"
+              :href="urls.vitex"
+              target="_blank"
+            >{{ $t('vitex.useNow') }}</a>
+            <a
+              class="btn button-group__button btn-secondary"
+              :href="urls.vitexWebsite"
+              target="_blank"
+            >{{ $t('vitex.learnMore') }}</a>
           </div>
         </b-row>
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
       </b-container>
     </div>
-    <div id="vite_app" class="landing__section vite_app">
+    <div id="vite_app" class="landing-section vite_app">
       <b-container>
         <b-row>
-          <b-col md="8" xs="12" sm="12" class="__section_content">
+          <b-col md="8" xs="12" sm="12" class="section-content">
             <b-row>
-              <div class="__title">
+              <div class="section-content__title">
                 {{ $t('app.title') }}
               </div>
             </b-row>
-            <b-row class="__content" v-html="$t('app.description')" />
-            <b-row class="__button_group">
-              <a class="btn __button btn-secondary" :href="urls.ios" target="_blank">{{ $t('app.ios') }}</a>
-              <a class="btn __button btn-secondary" :href="urls.android" target="_blank">{{ $t('app.android') }}</a>
-              <a class="btn __button btn-secondary" :href="urls.appWebsite" target="_blank">{{ $t('app.learnMore') }}</a>
+            <b-row class="section-content__content" v-html="$t('app.description')" />
+            <b-row class="button-group">
+              <a
+                class="btn button-group__button btn-secondary"
+                :href="urls.ios"
+                target="_blank"
+              >{{ $t('app.ios') }}</a>
+              <a
+                class="btn button-group__button btn-secondary"
+                :href="urls.android"
+                target="_blank"
+              >{{ $t('app.android') }}</a>
+              <a
+                class="btn button-group__button btn-secondary"
+                :href="urls.appWebsite"
+                target="_blank"
+              >{{ $t('app.learnMore') }}</a>
             </b-row>
           </b-col>
           <b-col md="auto" xs="12" sm="12" class="__section_img">
@@ -62,19 +82,23 @@
         </b-row>
       </b-container>
     </div>
-    <div id="vite_plus" class="landing__section vite_plus">
+    <div id="vite_plus" class="landing-section vite_plus">
       <b-container class="position-relative">
-        <b-row class="__section_content">
-          <div class="__title mx-auto">
+        <b-row class="section-content">
+          <div class="section-content__title mx-auto">
             {{ $t('vitePlus.title') }}
           </div>
         </b-row>
-        <b-row class="__section_content">
-          <div class="__content mx-auto" v-html="$t('vitePlus.description')" />
+        <b-row class="section-content">
+          <div class="section-content__content mx-auto" v-html="$t('vitePlus.description')" />
         </b-row>
-        <b-row class="__section_content">
-          <div class="mx-auto __button_group">
-            <a class="btn __button btn-secondary" :href="urls.vitePlus" target="_blank">{{ $t('vitePlus.learnMore') }}</a>
+        <b-row class="section-content">
+          <div class="mx-auto button-group">
+            <a
+              class="btn button-group__button btn-secondary"
+              :href="urls.vitePlus"
+              target="_blank"
+            >{{ $t('vitePlus.learnMore') }}</a>
           </div>
         </b-row>
         <div class="text-center">
@@ -83,20 +107,28 @@
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
       </b-container>
     </div>
-    <div id="vite_explorer" class="landing__section vite_explorer">
+    <div id="vite_explorer" class="landing-section vite_explorer">
       <b-container>
-        <b-row class="__section_content">
-          <div class="__title mx-auto">
+        <b-row class="section-content">
+          <div class="section-content__title mx-auto">
             {{ $t('explorer.title') }}
           </div>
         </b-row>
-        <b-row class="__section_content">
-          <div class="__content mx-auto" v-html="$t('explorer.description')" />
+        <b-row class="section-content">
+          <div class="section-content__content mx-auto" v-html="$t('explorer.description')" />
         </b-row>
-        <b-row class="__section_content">
-          <div class="mx-auto __button_group">
-            <a class="btn __button btn-secondary" :href="urls.viteScan" target="_blank">{{ $t('explorer.viteScan') }}</a>
-            <a class="btn __button btn-secondary" :href="urls.explorer" target="_blank">{{ $t('explorer.official') }}</a>
+        <b-row class="section-content">
+          <div class="mx-auto button-group">
+            <a
+              class="btn button-group__button btn-secondary"
+              :href="urls.viteScan"
+              target="_blank"
+            >{{ $t('explorer.viteScan') }}</a>
+            <a
+              class="btn button-group__button btn-secondary"
+              :href="urls.explorer"
+              target="_blank"
+            >{{ $t('explorer.official') }}</a>
           </div>
         </b-row>
         <div class="text-center">
@@ -104,19 +136,22 @@
         </div>
       </b-container>
     </div>
-    <div id="vite_web_wallet" class="landing__section vite_web_wallet">
+    <div id="vite_web_wallet" class="landing-section vite_web_wallet">
       <b-container class="position-relative">
-        <b-row class="__section_content">
-          <div class="__title mx-auto">
+        <b-row class="section-content">
+          <div class="section-content__title mx-auto">
             {{ $t('webWallet.title') }}
           </div>
         </b-row>
-        <b-row class="__section_content">
-          <div class="__content mx-auto" v-html="$t('webWallet.description')" />
+        <b-row class="section-content">
+          <div class="section-content__content mx-auto" v-html="$t('webWallet.description')" />
         </b-row>
-        <b-row class="__section_content">
-          <div class="mx-auto __button_group">
-            <a class="btn __button btn-secondary" :href="urls.webWallet">{{ $t('webWallet.loginWebWallet') }}</a>
+        <b-row class="section-content">
+          <div class="mx-auto button-group">
+            <a
+              class="btn button-group__button btn-secondary"
+              :href="urls.webWallet"
+            >{{ $t('webWallet.loginWebWallet') }}</a>
           </div>
         </b-row>
         <div class="text-center">
@@ -125,19 +160,23 @@
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
       </b-container>
     </div>
-    <div id="vite_forum" class="landing__section vite_forum">
+    <div id="vite_forum" class="landing-section vite_forum">
       <b-container class="position-relative">
-        <b-row class="__section_content">
-          <div class="__title mx-auto">
+        <b-row class="section-content">
+          <div class="section-content__title mx-auto">
             {{ $t('forum.title') }}
           </div>
         </b-row>
-        <b-row class="__section_content">
-          <div class="__content mx-auto" v-html="$t('forum.description')" />
+        <b-row class="section-content">
+          <div class="section-content__content mx-auto" v-html="$t('forum.description')" />
         </b-row>
-        <b-row class="__section_content">
-          <div class="mx-auto __button_group">
-            <a class="btn __button btn-secondary" :href="urls.forum" target="_blank">{{ $t('forum.toForum') }}</a>
+        <b-row class="section-content">
+          <div class="mx-auto button-group">
+            <a
+              class="btn button-group__button btn-secondary"
+              :href="urls.forum"
+              target="_blank"
+            >{{ $t('forum.toForum') }}</a>
           </div>
         </b-row>
         <div class="text-center">
@@ -159,8 +198,10 @@ export default {
       urls: {
         vitex: 'https://x.vite.net/trade?symbol=VX_BTC-000',
         vitexWebsite: 'https://vitex.net',
-        ios: 'https://apps.apple.com/us/app/vite-official-hd-wallet/id1437629486',
-        android: 'https://play.google.com/store/apps/details?id=net.vite.wallet',
+        ios:
+          'https://apps.apple.com/us/app/vite-official-hd-wallet/id1437629486',
+        android:
+          'https://play.google.com/store/apps/details?id=net.vite.wallet',
         appWebsite: 'https://app.vite.net/',
         vitePlus: 'https://donation.viteplus.net/',
         explorer: 'https://explorer.vite.net/',
@@ -176,90 +217,84 @@ export default {
 <style lang="scss" scoped>
 @import "~assets/css/vars.scss";
 
-.landing__home {
+.landing {
   min-height: 500px;
   background-image: url("~assets/images/top_blue@2x.png");
   background-size: cover;
   background-position-y: bottom;
   text-align: center;
 
-  .__title__wrapper {
+  .slogan {
     font-family: PingFangSC-Regular, PingFang SC;
-    .__title {
-      text-align: center;
-      color: rgba(255, 255, 255, 1);
-      font-size: 40px;
-      font-weight: 600;
-      margin-bottom: 50px;
-      line-height: 70px;
-      letter-spacing: 5px;
-    }
-    .__title_sub {
-      font-size: 32px;
-      font-weight: 400;
-      line-height: 36px;
-      letter-spacing: 3px;
-      color: rgba(255, 255, 255, 1);
-    }
   }
-  .__landing_img {
+  .slogan__title-sub {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 1);
+  }
+  .slogan__title {
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    line-height: 70px;
+    letter-spacing: 5px;
+  }
+  .landing__img {
     img {
       width: 100%;
     }
   }
   @include media-breakpoint-up(md) {
     min-height: 500px;
-    .__title__wrapper {
-      .__title {
-        margin-top: 80px;
-        font-size: 40px;
-        font-weight: 600;
-        margin-bottom: 50px;
-        line-height: 70px;
-        letter-spacing: 5px;
-      }
-      .__title_sub {
-        font-size: 32px;
-        font-weight: 400;
-        line-height: 36px;
-        letter-spacing: 3px;
-      }
+    .slogan__title {
+      margin-top: 80px;
+      font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 50px;
+      line-height: 70px;
+      letter-spacing: 5px;
+    }
+    .slogan__title-sub {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 3px;
     }
   }
   @include media-breakpoint-up(lg) {
     min-height: 1025px;
-    .__title__wrapper {
-      .__title {
-        margin-top: 80px;
-        font-size: 40px;
-        font-weight: 600;
-        margin-bottom: 50px;
-        line-height: 70px;
-        letter-spacing: 5px;
-      }
-      .__title_sub {
-        font-size: 32px;
-        font-weight: 400;
-        line-height: 36px;
-        letter-spacing: 3px;
-      }
+    .slogan__title {
+      margin-top: 80px;
+      font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 50px;
+      line-height: 70px;
+      letter-spacing: 5px;
+    }
+    .slogan__title-sub {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 3px;
     }
   }
   @include media-breakpoint-up(xl) {
     min-height: 1425px;
-    .__title__wrapper {
-      .__title {
-        font-size: 50px;
-        margin-top: 100px;
-      }
-      .__title_sub {
-        font-size: 32px;
-      }
+    .slogan__title {
+      font-size: 50px;
+      margin-top: 100px;
+    }
+    .slogan__title-sub {
+      font-size: 32px;
     }
   }
 }
 
-.landing__section {
+.landing-section {
   .block_img {
     display: none;
     @include media-breakpoint-up(lg) {
@@ -276,8 +311,9 @@ export default {
       max-width: 700px;
     }
   }
-  .__section_content {
-    .__title, .__content {
+  .section-content {
+    .section-content__title,
+    .section-content__content {
       padding-left: 15px;
       padding-right: 15px;
       @include media-breakpoint-up(lg) {
@@ -286,13 +322,13 @@ export default {
       }
     }
   }
-  .__button_group {
+  .button-group {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    .__button {
+    .button-group__button {
       height: 54px;
       box-shadow: 0px 8px 34px 0px rgba(0, 122, 255, 0.2);
       border-radius: 5px;
@@ -304,7 +340,7 @@ export default {
       line-height: 54px;
     }
     @include media-breakpoint-up(md) {
-      .__button {
+      .button-group__button {
         padding: 0 53px;
       }
     }
@@ -317,15 +353,15 @@ export default {
   &.vite_explorer,
   &.vite_web_wallet,
   &.vite_forum {
-    .__section_content {
-      .__title {
+    .section-content {
+      .section-content__title {
         font-size: 32px;
         line-height: 45px;
         margin-bottom: 40px;
         font-weight: 600;
         color: rgba(23, 28, 52, 1);
       }
-      .__content {
+      .section-content__content {
         font-weight: 400;
         color: rgba(84, 86, 90, 1);
         text-align: left;
@@ -348,8 +384,8 @@ export default {
   }
   &.vite_plus {
     padding-top: 150px;
-    .__button_group {
-      .__button {
+    .button-group {
+      .button-group__button {
         margin-right: 0;
       }
     }
@@ -366,12 +402,13 @@ export default {
     .section__img {
       margin-top: 120px;
     }
-    .__section_content {
-      .__title, .__content {
+    .section-content {
+      .section-content__title,
+      .section-content__content {
         color: white;
       }
-      .__button_group {
-        .__button {
+      .button-group {
+        .button-group__button {
           background: rgba(255, 255, 255, 1);
           color: #007aff;
         }
@@ -407,14 +444,14 @@ export default {
     padding-bottom: 30px;
     background-image: url("~assets/images/footer_blue@2x.png");
     background-size: cover;
-    .__section_content {
-      .__title {
+    .section-content {
+      .section-content__title {
         color: white;
       }
-      .__content {
+      .section-content__content {
         color: white;
       }
-      .__button {
+      .button-group__button {
         background: rgba(255, 255, 255, 1);
         color: #007aff;
       }
@@ -430,23 +467,23 @@ export default {
   &.vite_app {
     background-color: #007aff;
     color: white;
-    .__section_content {
+    .section-content {
       padding-top: 127px;
       padding-bottom: 127px;
-      .__title {
+      .section-content__title {
         margin-bottom: 40px;
         font-size: 32px;
         font-weight: 600;
         color: rgba(255, 255, 255, 1);
         line-height: 45px;
       }
-      .__content {
+      .section-content__content {
         margin-bottom: 50px;
       }
-      .__button_group {
+      .button-group {
         justify-content: space-around;
         width: auto;
-        .__button {
+        .button-group__button {
           background: rgba(255, 255, 255, 1);
           color: #007aff;
           margin-top: 15px;
@@ -461,9 +498,9 @@ export default {
     margin-top: 30px;
     @include media-breakpoint-up(md) {
       margin-top: 50px;
-      .__section_content {
-        .__button_group {
-          .__button {
+      .section-content {
+        .button-group {
+          .button-group__button {
             margin-top: 15px;
             margin-right: 20px;
           }
@@ -483,17 +520,17 @@ export default {
           margin-top: -100px;
         }
       }
-      .__section_content {
-        .__button_group {
+      .section-content {
+        .button-group {
           justify-content: space-between;
         }
       }
     }
     @include media-breakpoint-up(xl) {
       margin-top: 340px;
-      .__section_content {
-        .__button_group {
-          .__button {
+      .section-content {
+        .button-group {
+          .button-group__button {
             margin-top: 0;
             margin-right: 30px;
           }
