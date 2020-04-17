@@ -6,7 +6,7 @@
           <img src="@/assets/images/logo@2x.png" class="v-logo__img" alt="Vite Logo">
         </b-col>
         <b-col sm="12" xs="12" lg="8" class="d-flex justify-content-between">
-          <a class="v-footer__navitem" v-for="item in urlList" :key="item.name" :href="item.url"> {{ $t(`nav.${item.name}`) }} </a>
+          <a v-for="item in urlList" :key="item.name" class="v-footer__navitem" :href="item.url"> {{ $t(`nav.${item.name}`) }} </a>
         </b-col>
       </b-row>
       <b-row>
