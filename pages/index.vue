@@ -328,7 +328,7 @@ export default {
       .__content {
         font-weight: 400;
         color: rgba(84, 86, 90, 1);
-        text-align: center;
+        text-align: left;
         font-size: 16px;
         line-height: 26px;
         margin-bottom: 50px;
@@ -495,7 +495,7 @@ export default {
         .__button_group {
           .__button {
             margin-top: 0;
-            margin-right: 50px;
+            margin-right: 30px;
           }
         }
       }
