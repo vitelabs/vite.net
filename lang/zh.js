@@ -11,6 +11,10 @@ export default {
     webWallet: '网页钱包',
     forum: '论坛'
   },
+  footer: {
+    investor: '投资机构',
+    partner: '合作伙伴'
+  },
   slogan: '全球首个基于DAG实现智能合约公链',
   vitex: {
     title: '社区治理、社区受益的真正去中心化交易所',

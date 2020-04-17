@@ -95,9 +95,7 @@
         </b-row>
         <b-row class="__section_content">
           <div class="mx-auto __button_group">
-            <b-button class="__button">
-              <a :href="urls.viteScan" target="_blank">{{ $t('explorer.viteScan') }}</a>
-            </b-button>
+            <a class="btn __button btn-secondary" :href="urls.viteScan" target="_blank">{{ $t('explorer.viteScan') }}</a>
             <a class="btn __button btn-secondary" :href="urls.explorer" target="_blank">{{ $t('explorer.official') }}</a>
           </div>
         </b-row>

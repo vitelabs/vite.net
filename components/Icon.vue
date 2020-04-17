@@ -12,12 +12,17 @@ const iconMap = {
   twitter: require('@/assets/images/icons/twitter.svg'),
   github: require('@/assets/images/icons/github.svg'),
   forum: require('@/assets/images/icons/forum.svg'),
-  weibo: require('@/assets/images/icons/weibo.svg')
+  weibo: require('@/assets/images/icons/weibo.svg'),
+  medium: require('@/assets/images/icons/medium.svg'),
+  facebook: require('@/assets/images/icons/facebook.svg')
 }
 
 export default {
   props: {
-    name: String
+    name: {
+      type: String,
+      default: null
+    }
   },
   data () {
     return {
