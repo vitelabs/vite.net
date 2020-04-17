@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="landing__home">
+    <div id="home" class="landing__home">
       <Nav />
       <b-container>
         <b-row class="__title__wrapper">

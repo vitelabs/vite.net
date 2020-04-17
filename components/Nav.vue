@@ -1,7 +1,7 @@
 <template>
   <b-container class="__navbar_wrapper" fluid>
     <b-navbar class="__navbar" toggleable="lg" variant="faded">
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="#home">
         <img class="__logo" src="~assets/images/logo@2x.png" alt="Vite Logo">
       </b-navbar-brand>
 
