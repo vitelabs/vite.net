@@ -1,41 +1,41 @@
 <template>
-  <div class="v-footer">
+  <div class="footer">
     <b-container>
       <b-row>
-        <b-col sm="12" xs="12" md="12" lg="4" class="v-logo">
-          <img src="@/assets/images/logo@2x.png" class="v-logo__img" alt="Vite Logo">
+        <b-col sm="12" xs="12" md="12" lg="4" class="logo">
+          <img src="@/assets/images/logo@2x.png" class="logo__img" alt="Vite Logo">
         </b-col>
         <b-col sm="12" xs="12" lg="8" class="d-flex justify-content-between">
-          <a v-for="item in urlList" :key="item.name" class="v-footer__navitem" :href="item.url"> {{ $t(`nav.${item.name}`) }} </a>
+          <a v-for="item in urlList" :key="item.name" class="footer__navitem" :href="item.url"> {{ $t(`nav.${item.name}`) }} </a>
         </b-col>
       </b-row>
       <b-row>
-        <b-col cols="12" class="v-footer__subtitle">
+        <b-col cols="12" class="footer__subtitle">
           {{ $t('footer.investor') }}
         </b-col>
-        <b-col cols="12" class="v-list d-flex justify-content-center flex-wrap">
+        <b-col cols="12" class="list d-flex justify-content-center flex-wrap">
           <a v-for="item in investorList" :key="item.name" :href="item.url" target="_blank">
-            <img class="v-footer__img" :src="`/images/investors/${item.name}@2x.png`" :alt="item.name">
+            <img class="footer__img" :src="`/images/investors/${item.name}@2x.png`" :alt="item.name">
           </a>
         </b-col>
-        <b-col cols="12" class="v-footer__subtitle">
+        <b-col cols="12" class="footer__subtitle">
           {{ $t('footer.partner') }}
         </b-col>
-        <b-col cols="12" class="v-list d-flex justify-content-center flex-wrap">
+        <b-col cols="12" class="list d-flex justify-content-center flex-wrap">
           <a v-for="item in partnerList" :key="item.name" :href="item.url" target="_blank">
-            <img class="v-footer__img" :src="`/images/partners/${item.name}@2x.png`" :alt="item.name">
+            <img class="footer__img" :src="`/images/partners/${item.name}@2x.png`" :alt="item.name">
           </a>
         </b-col>
         <b-col cols="12">
-          <div class="v-footer__line" />
+          <div class="footer__line" />
         </b-col>
-        <b-col class="v-list d-flex justify-content-center justify-content-lg-between flex-wrap">
+        <b-col class="list d-flex justify-content-center justify-content-lg-between flex-wrap">
           <a v-for="item in iconUrlList" :key="item.name" :href="item.url">
             <icon :name="item.name" />
           </a>
         </b-col>
       </b-row>
-      <b-row class="v-copy-right">
+      <b-row class="copy-right">
         <b-col>
           © 2020 VITE Labs. All Rights Reserved.
         </b-col>
@@ -119,10 +119,10 @@ export default {
 <style lang="scss" scoped>
 @import "~assets/css/vars.scss";
 
-.v-footer {
+.footer {
   padding-top: 35px;
   background-color: #006fe9;
-  .v-logo {
+  .logo {
     text-align: center;
     margin-bottom: 30px;
     @include media-breakpoint-up(lg) {
@@ -130,7 +130,7 @@ export default {
       margin-bottom: 0;
     }
   }
-  .v-footer__subtitle {
+  .footer__subtitle {
     font-size: 14px;
     margin-bottom: 10px;
     margin-top: 24px;
@@ -139,12 +139,12 @@ export default {
       margin-top: 80px;
     }
   }
-  .v-footer__navitem {
+  .footer__navitem {
     color: white;
     font-size: 14px;
     line-height: 60px;
   }
-  .v-footer__img {
+  .footer__img {
     width: 50px;
     height: 50px;
     margin-right: 8px;
@@ -156,17 +156,17 @@ export default {
       margin-left: 22px;
     }
   }
-  .v-logo__img {
+  .logo__img {
     width: 108px;
   }
-  .v-footer__line {
+  .footer__line {
     height: 1px;
     width: auto;
     background-color: rgba(255,255,255,0.3);
     margin-bottom: 50px;
     margin-top: 50px;
   }
-  .v-copy-right {
+  .copy-right {
     font-size: 12px;
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
@@ -178,7 +178,7 @@ export default {
       text-align: right;
     }
   }
-  .v-list {
+  .list {
     margin-top: 20px;
     @include media-breakpoint-up(md) {
       margin-top: 0;
