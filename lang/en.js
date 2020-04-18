@@ -11,6 +11,10 @@ export default {
     webWallet: 'Web Wallet',
     forum: 'Forum'
   },
+  footer: {
+    investor: 'Our Investors',
+    partner: 'Our Partners'
+  },
   slogan: 'World-First DAG Based Blockchain with Smart Contract',
   vitex: {
     title: 'A Truly Decentralized Exchange By the Community, For the Community',
