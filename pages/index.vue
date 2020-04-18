@@ -415,11 +415,6 @@ export default {
   }
   &.vite_plus {
     padding-top: 60px;
-    .button-group {
-      .button-group__button {
-        margin-right: 0;
-      }
-    }
     @include media-breakpoint-up(md) {
       padding-top: 150px;
     }
