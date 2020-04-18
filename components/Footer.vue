@@ -136,6 +136,7 @@ export default {
     margin-top: 24px;
     color: white;
     font-weight: 600;
+    text-align: center;
     &:first-child {
       margin-top: 80px;
     }
