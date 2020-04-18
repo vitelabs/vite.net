@@ -57,7 +57,9 @@
                 {{ $t('app.title') }}
               </div>
             </b-row>
-            <b-row class="section-content__content" v-html="$t('app.description')" />
+            <b-row>
+              <div class="section-content__content" v-html="$t('app.description')" />
+            </b-row>
             <b-row class="button-group">
               <a
                 class="btn button-group__button btn-secondary"
@@ -311,7 +313,10 @@ export default {
       max-width: 700px;
     }
   }
-  .section-content {
+  .section-content__content {
+    font-weight: 400;
+    line-height:30px;
+  }
     .section-content__title,
     .section-content__content {
       padding-left: 15px;
@@ -321,7 +326,6 @@ export default {
         padding-right: 0;
       }
     }
-  }
   .button-group {
     display: flex;
     flex-direction: row;
@@ -364,7 +368,7 @@ export default {
       .section-content__content {
         font-weight: 400;
         color: rgba(84, 86, 90, 1);
-        text-align: left;
+        text-align: center;
         font-size: 16px;
         line-height: 26px;
         margin-bottom: 50px;
@@ -479,7 +483,6 @@ export default {
       }
       .section-content__content {
         margin-bottom: 50px;
-        flex-direction: column;
       }
       .button-group {
         justify-content: space-around;

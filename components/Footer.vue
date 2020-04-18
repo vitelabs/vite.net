@@ -135,6 +135,7 @@ export default {
     margin-bottom: 10px;
     margin-top: 24px;
     color: white;
+    font-weight: 600;
     &:first-child {
       margin-top: 80px;
     }
@@ -143,6 +144,7 @@ export default {
     color: white;
     font-size: 14px;
     line-height: 60px;
+    font-weight: 600;
   }
   .footer__img {
     width: 50px;
