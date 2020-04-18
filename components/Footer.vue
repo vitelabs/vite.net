@@ -5,7 +5,7 @@
         <b-col sm="12" xs="12" md="12" lg="4" class="logo">
           <img src="@/assets/images/logo@2x.png" class="logo__img" alt="Vite Logo">
         </b-col>
-        <b-col sm="12" xs="12" lg="8" class="d-flex justify-content-between">
+        <b-col sm="12" xs="12" lg="8" class="d-flex list__wrapper">
           <a v-for="item in urlList" :key="item.name" class="footer__navitem" :href="item.url"> {{ $t(`nav.${item.name}`) }} </a>
         </b-col>
       </b-row>
@@ -138,14 +138,42 @@ export default {
     font-weight: 600;
     text-align: center;
     &:first-child {
-      margin-top: 80px;
+      margin-top: 40px;
+    }
+    @include media-breakpoint-up(md) {
+      &:first-child {
+        margin-top: 80px;
+      }
     }
   }
-  .footer__navitem {
-    color: white;
-    font-size: 14px;
-    line-height: 60px;
-    font-weight: 600;
+  .list__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    .footer__navitem {
+      padding-left: 15px;
+      padding-right: 15px;
+      color: white;
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: 600;
+    }
+    @include media-breakpoint-up(md) {
+      padding-left: 15px;
+      padding-right: 15px;
+      .footer__navitem {
+        color: white;
+        font-size: 14px;
+        line-height: 60px;
+        font-weight: 600;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      justify-content: space-between;
+      .footer__navitem {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
   }
   .footer__img {
     width: 50px;

@@ -51,7 +51,7 @@
     <div id="vite_app" class="landing-section vite_app">
       <b-container>
         <b-row>
-          <b-col md="8" xs="12" sm="12" class="section-content">
+          <b-col lg="8" xs="12" sm="12" class="section-content">
             <b-row>
               <div class="section-content__title">
                 {{ $t('app.title') }}
@@ -78,7 +78,7 @@
               >{{ $t('app.learnMore') }}</a>
             </b-row>
           </b-col>
-          <b-col md="auto" xs="12" sm="12" class="__section_img">
+          <b-col lg="auto" xs="12" sm="12" class="__section_img">
             <img class="img-fluid" src="@/assets/images/wallet@2x.png" alt="Vite Wallet">
           </b-col>
         </b-row>
@@ -104,7 +104,7 @@
           </div>
         </b-row>
         <div class="text-center">
-          <img class="mx-auto section__img img-fluid" src="@/assets/images/vite_plus@2x.png">
+          <img class="mx-auto section__img_buttom img-fluid" src="@/assets/images/vite_plus@2x.png">
         </div>
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
       </b-container>
@@ -134,7 +134,7 @@
           </div>
         </b-row>
         <div class="text-center">
-          <img class="mx-auto section__img img-fluid" src="@/assets/images/explorer@2x.png">
+          <img class="mx-auto section__img_buttom img-fluid" src="@/assets/images/explorer@2x.png">
         </div>
       </b-container>
     </div>
@@ -157,7 +157,10 @@
           </div>
         </b-row>
         <div class="text-center">
-          <img class="mx-auto section__img img-fluid" src="@/assets/images/web_wallet@2x.png">
+          <img
+            class="mx-auto section__img_buttom img-fluid"
+            src="@/assets/images/web_wallet@2x.png"
+          >
         </div>
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
       </b-container>
@@ -182,7 +185,7 @@
           </div>
         </b-row>
         <div class="text-center">
-          <img class="mx-auto section__img img-fluid" src="@/assets/images/forum@2x.png">
+          <img class="mx-auto section__img_buttom img-fluid" src="@/assets/images/forum@2x.png">
         </div>
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
       </b-container>
@@ -230,16 +233,17 @@ export default {
     font-family: PingFangSC-Regular, PingFang SC;
   }
   .slogan__title-sub {
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 400;
     line-height: 36px;
     letter-spacing: 3px;
     color: rgba(255, 255, 255, 1);
   }
   .slogan__title {
+    margin-top: 30px;
     text-align: center;
     color: rgba(255, 255, 255, 1);
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 50px;
     line-height: 70px;
@@ -307,25 +311,56 @@ export default {
       bottom: 161px;
     }
   }
-  .section__img {
+  .section__img,
+  .section__img_buttom {
     max-width: 100%;
     @include media-breakpoint-up(lg) {
       max-width: 700px;
     }
   }
+  .section__img_buttom {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    @include media-breakpoint-up(md) {
+      margin-top: 120px;
+      margin-bottom: 0;
+    }
+  }
   .section-content__content {
     font-weight: 400;
-    line-height:30px;
-  }
-    .section-content__title,
-    .section-content__content {
-      padding-left: 15px;
-      padding-right: 15px;
-      @include media-breakpoint-up(lg) {
-        padding-left: 0;
-        padding-right: 0;
-      }
+    line-height: 30px;
+    color: rgba(84, 86, 90, 1);
+    text-align: left;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 50px;
+    @include media-breakpoint-up(md) {
+      text-align: center;
     }
+  }
+  .section-content__title {
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: rgba(23, 28, 52, 1);
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+      line-height: 45px;
+      margin-bottom: 40px;
+      font-weight: 600;
+      color: rgba(23, 28, 52, 1);
+    }
+  }
+  .section-content__title,
+  .section-content__content {
+    padding-left: 15px;
+    padding-right: 15px;
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   .button-group {
     display: flex;
     flex-direction: row;
@@ -342,37 +377,23 @@ export default {
       font-weight: 600;
       color: white;
       line-height: 54px;
+      width: 100%;
+      margin-top: 15px;
+      margin-right: 10px;
+      margin-left: 10px;
+      width: 100%;
     }
     @include media-breakpoint-up(md) {
       .button-group__button {
         padding: 0 53px;
+        width: auto;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
       }
     }
     @include media-breakpoint-up(lg) {
       width: 700px;
-    }
-  }
-  &.vitex,
-  &.vite_plus,
-  &.vite_explorer,
-  &.vite_web_wallet,
-  &.vite_forum {
-    .section-content {
-      .section-content__title {
-        font-size: 32px;
-        line-height: 45px;
-        margin-bottom: 40px;
-        font-weight: 600;
-        color: rgba(23, 28, 52, 1);
-      }
-      .section-content__content {
-        font-weight: 400;
-        color: rgba(84, 86, 90, 1);
-        text-align: center;
-        font-size: 16px;
-        line-height: 26px;
-        margin-bottom: 50px;
-      }
     }
   }
 
@@ -382,19 +403,25 @@ export default {
       bottom: 70px;
     }
     .section__img {
-      margin-bottom: 120px;
-      margin-top: -20px;
+      margin-bottom: 60px;
+      margin-top: 30px;
+    }
+    @include media-breakpoint-up(md) {
+      .section__img {
+        margin-bottom: 120px;
+        margin-top: -20px;
+      }
     }
   }
   &.vite_plus {
-    padding-top: 150px;
+    padding-top: 60px;
     .button-group {
       .button-group__button {
         margin-right: 0;
       }
     }
-    .section__img {
-      margin-top: 120px;
+    @include media-breakpoint-up(md) {
+      padding-top: 150px;
     }
   }
   &.vite_explorer {
@@ -403,9 +430,6 @@ export default {
     background-color: #007aff;
     padding-top: 30px;
     padding-bottom: 30px;
-    .section__img {
-      margin-top: 120px;
-    }
     .section-content {
       .section-content__title,
       .section-content__content {
@@ -435,9 +459,6 @@ export default {
     .block_img {
       left: 0;
     }
-    .section__img {
-      margin-top: 120px;
-    }
     padding-top: 30px;
     @include media-breakpoint-up(md) {
       padding-top: 0;
@@ -460,9 +481,6 @@ export default {
         color: #007aff;
       }
     }
-    .section__img {
-      margin-top: 120px;
-    }
     @include media-breakpoint-up(md) {
       padding-top: 366px;
       padding-bottom: 150px;
@@ -470,31 +488,28 @@ export default {
   }
   &.vite_app {
     background-color: #007aff;
-    color: white;
     .section-content {
-      padding-top: 127px;
-      padding-bottom: 127px;
+      padding-top: 60px;
+      padding-bottom: 60px;
       .section-content__title {
-        margin-bottom: 40px;
-        font-size: 32px;
-        font-weight: 600;
         color: rgba(255, 255, 255, 1);
-        line-height: 45px;
       }
       .section-content__content {
+        text-align: left;
         margin-bottom: 50px;
+        color: white;
       }
-      .button-group {
-        justify-content: space-around;
-        width: auto;
-        .button-group__button {
-          background: rgba(255, 255, 255, 1);
-          color: #007aff;
-          margin-top: 15px;
-        }
+    }
+    .button-group {
+      justify-content: space-around;
+      width: auto;
+      .button-group__button {
+        background: rgba(255, 255, 255, 1);
+        color: #007aff;
       }
     }
     .__section_img {
+      margin-bottom: 30px;
       img {
         width: 100%;
       }
@@ -503,6 +518,8 @@ export default {
     @include media-breakpoint-up(md) {
       margin-top: 50px;
       .section-content {
+        padding-top: 127px;
+        padding-bottom: 127px;
         .button-group {
           .button-group__button {
             margin-top: 15px;
@@ -511,6 +528,7 @@ export default {
         }
       }
       .__section_img {
+        margin-bottom: 0;
         width: 380px;
         img {
           margin-top: 120px;

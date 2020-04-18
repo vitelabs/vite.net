@@ -1,5 +1,8 @@
 
 export default {
+  server: {
+    host: '0.0.0.0' // default: localhost
+  },
   mode: 'universal',
   /*
   ** Headers of the page
