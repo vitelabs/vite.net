@@ -479,6 +479,7 @@ export default {
       }
       .section-content__content {
         margin-bottom: 50px;
+        flex-direction: column;
       }
       .button-group {
         justify-content: space-around;
