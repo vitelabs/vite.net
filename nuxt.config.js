@@ -80,7 +80,8 @@ export default {
   bootstrapVue: {
     componentPlugins: [
       'LayoutPlugin',
-      'NavbarPlugin'
+      'NavbarPlugin',
+      'PopoverPlugin'
     ],
     directivePlugins: [],
     bootstrapCSS: false, // Or `css: false`

@@ -30,10 +30,15 @@
           <div class="footer__line" />
         </b-col>
         <b-col class="list d-flex justify-content-center justify-content-lg-between flex-wrap">
-          <a v-for="item in iconUrlList" :key="item.name" :href="item.url">
+          <a v-for="item in iconUrlList" :id="`popover-${item.name}`" :key="item.name" :href="item.url">
             <icon :name="item.name" />
           </a>
         </b-col>
+        <div>
+          <b-popover target="popover-wechat" triggers="click" placement="top">
+            <img style="width: 100%" src="@/assets/images/wxCode.png" alt="">
+          </b-popover>
+        </div>
       </b-row>
       <b-row class="copy-right">
         <b-col>
@@ -58,7 +63,7 @@ export default {
         { name: 'twitter', url: 'https://twitter.com/vitelabs' },
         { name: 'telegram', url: 'https://t.me/vite_ann' },
         { name: 'reddit', url: 'https://www.reddit.com/r/vitelabs/' },
-        { name: 'wechat', url: '' },
+        { name: 'wechat', url: 'javascript:void(0)' },
         { name: 'discord', url: 'https://discordapp.com/invite/CsVY76q' },
         { name: 'youtube', url: 'https://www.youtube.com/channel/UC8qft2rEzBnP9yJOGdsJBVg' },
         { name: 'medium', url: 'https://medium.com/vitelabs' },
