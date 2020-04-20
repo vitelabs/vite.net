@@ -219,6 +219,16 @@ export default {
 }
 </script>
 
+<style lang="scss">
+@import "~assets/css/vars.scss";
+
+.section-content__content {
+    p {
+      margin-bottom: 0;
+    }
+}
+</style>
+
 <style lang="scss" scoped>
 @import "~assets/css/vars.scss";
 
@@ -327,12 +337,12 @@ export default {
     }
   }
   .section-content__content {
+    font-family:PingFangSC-Regular,PingFang SC;
     font-weight: 400;
     line-height: 30px;
     color: rgba(84, 86, 90, 1);
     text-align: left;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 14px;
     margin-bottom: 50px;
     @include media-breakpoint-up(md) {
       text-align: center;
