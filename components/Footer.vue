@@ -52,17 +52,17 @@ export default {
   data () {
     return {
       iconUrlList: [
-        { name: 'weibo', url: '' },
-        { name: 'forum', url: '' },
-        { name: 'github', url: '' },
-        { name: 'twitter', url: '' },
-        { name: 'telegram', url: '' },
-        { name: 'reddit', url: '' },
+        { name: 'weibo', url: 'https://weibo.com/u/6572727462' },
+        { name: 'forum', url: 'https://forum.vite.net/' },
+        { name: 'github', url: 'https://github.com/vitelabs' },
+        { name: 'twitter', url: 'https://twitter.com/vitelabs' },
+        { name: 'telegram', url: 'https://t.me/vite_ann' },
+        { name: 'reddit', url: 'https://www.reddit.com/r/vitelabs/' },
         { name: 'wechat', url: '' },
-        { name: 'discord', url: '' },
-        { name: 'youtube', url: '' },
-        { name: 'medium', url: '' },
-        { name: 'facebook', url: '' }
+        { name: 'discord', url: 'https://discordapp.com/invite/CsVY76q' },
+        { name: 'youtube', url: 'https://www.youtube.com/channel/UC8qft2rEzBnP9yJOGdsJBVg' },
+        { name: 'medium', url: 'https://medium.com/vitelabs' },
+        { name: 'facebook', url: 'https://www.facebook.com/vitelabs/' }
       ],
       urlList: [
         { name: 'vitex', url: '#vitex' },
@@ -74,6 +74,7 @@ export default {
       ],
       investorList: [
         { name: 'bitmain', url: 'https://www.bitmain.com/' },
+        { name: 'ok', url: 'https://www.okex.com/project/9' },
         { name: 'ld', url: 'https://ldcap.com/' },
         { name: 'node', url: 'http://www.nodecap.com/' },
         { name: 'linkvc', url: 'http://www.linkvc.com/' },
@@ -96,20 +97,21 @@ export default {
         { name: 'bn', url: '' }
       ],
       partnerList: [
-        { name: 'btc.com', url: '' },
-        { name: 'troy', url: '' },
-        { name: 'f2pool', url: '' },
-        { name: 'spark-pool', url: '' },
-        { name: 'harmony', url: '' },
-        { name: 'ankr', url: '' },
-        { name: 'hashfin', url: '' },
-        { name: 'vgate', url: '' },
-        { name: 'syra', url: '' },
-        { name: 'bi23', url: '' },
+        { name: 'btc.com', url: 'https://btc.com/' },
+        { name: 'ok', url: 'https://www.okex.com/' },
+        { name: 'troy', url: 'https://troytrade.com/' },
+        { name: 'f2pool', url: 'https://www.f2pool.com/' },
+        { name: 'spark-pool', url: 'https://www.sparkpool.com/' },
+        { name: 'harmony', url: 'https://harmony.one/' },
+        { name: 'ankr', url: 'https://www.ankr.com/' },
+        { name: 'hashfin', url: 'https://www.hashfin.com/zh-CN/' },
+        { name: 'vgate', url: 'https://vgate.io/' },
+        { name: 'syra', url: 'http://www.syrgov.net/home.aspx' },
+        { name: 'bi23', url: 'https://www.bi23.com/#/' },
         { name: 'xinsheng', url: '' },
-        { name: 'vite-scan', url: '' },
-        { name: 'knownsec', url: '' },
-        { name: 'ACHpay', url: '' }
+        { name: 'vite-scan', url: 'https://vitescan.io/' },
+        { name: 'knownsec', url: 'https://www.knownsec.com/#/' },
+        { name: 'ACHpay', url: 'https://www.alchemytech.io/' }
       ]
     }
   }
