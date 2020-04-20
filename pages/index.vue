@@ -187,7 +187,6 @@
         <div class="text-center">
           <img class="mx-auto section__img_buttom img-fluid" src="@/assets/images/forum@2x.png">
         </div>
-        <img class="block_img" src="@/assets/images/block@2x.png" alt>
       </b-container>
     </div>
   </div>
@@ -404,6 +403,13 @@ export default {
     }
     @include media-breakpoint-up(lg) {
       width: 700px;
+      justify-content: center;
+      .button-group__button {
+        margin-right: 50px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
   }
 

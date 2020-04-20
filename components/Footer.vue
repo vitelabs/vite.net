@@ -13,7 +13,7 @@
         <b-col cols="12" class="footer__subtitle">
           {{ $t('footer.investor') }}
         </b-col>
-        <b-col cols="12" class="list d-flex justify-content-center flex-wrap">
+        <b-col cols="12" class="list d-flex justify-content-start flex-wrap">
           <a v-for="item in investorList" :key="item.name" :href="item.url" target="_blank">
             <img class="footer__img" :src="`/images/investors/${item.name}@2x.png`" :alt="item.name">
           </a>
@@ -21,7 +21,7 @@
         <b-col cols="12" class="footer__subtitle">
           {{ $t('footer.partner') }}
         </b-col>
-        <b-col cols="12" class="list d-flex justify-content-center flex-wrap">
+        <b-col cols="12" class="list d-flex justify-content-start  flex-wrap">
           <a v-for="item in partnerList" :key="item.name" :href="item.url" target="_blank">
             <img class="footer__img" :src="`/images/partners/${item.name}@2x.png`" :alt="item.name">
           </a>
@@ -133,17 +133,12 @@ export default {
   .footer__subtitle {
     font-size: 14px;
     margin-bottom: 10px;
-    margin-top: 24px;
     color: white;
     font-weight: 600;
-    text-align: center;
-    &:first-child {
-      margin-top: 40px;
-    }
+    text-align: left;
+    margin-top: 40px;
     @include media-breakpoint-up(md) {
-      &:first-child {
-        margin-top: 80px;
-      }
+      margin-top: 80px;
     }
   }
   .list__wrapper {
@@ -178,13 +173,11 @@ export default {
   .footer__img {
     width: 50px;
     height: 50px;
-    margin-right: 8px;
-    margin-left: 8px;
+    margin-right: 16px;
     @include media-breakpoint-up(md) {
       width: 80px;
       height: 80px;
-      margin-right: 22px;
-      margin-left: 22px;
+      margin-right: 44px;
     }
   }
   .logo__img {
