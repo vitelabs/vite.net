@@ -72,8 +72,17 @@
                 target="_blank"
               >{{ $t('app.android') }}</a>
               <a
+                id="popover-wallet-qr"
                 class="btn button-group__button btn-secondary"
-                :href="urls.appWebsite"
+                href="javascript:void(0)"
+              >{{ $t('app.qr') }}
+                <b-popover target="popover-wallet-qr" triggers="hover" placement="top">
+                  <img style="width: 100%" src="@/assets/images/qr-wallet.png" alt="">
+                </b-popover>
+              </a>
+              <a
+                class="btn button-group__button btn-secondary"
+                :href="urls.forumWallet"
                 target="_blank"
               >{{ $t('app.learnMore') }}</a>
             </b-row>
@@ -211,7 +220,8 @@ export default {
         explorer: 'https://explorer.vite.net/',
         viteScan: 'https://vitescan.io/',
         webWallet: 'https://x.vite.net',
-        forum: 'https://forum.vite.net'
+        forum: 'https://forum.vite.net',
+        forumWallet: 'https://forum.vite.net/category/36/vite-wallet'
       }
     }
   }
@@ -531,12 +541,12 @@ export default {
       .section-content {
         padding-top: 127px;
         padding-bottom: 127px;
-        .button-group {
+      }
+      .button-group {
           .button-group__button {
             margin-top: 15px;
             margin-right: 20px;
           }
-        }
       }
       .__section_img {
         margin-bottom: 0;
@@ -561,14 +571,6 @@ export default {
     }
     @include media-breakpoint-up(xl) {
       margin-top: 340px;
-      .section-content {
-        .button-group {
-          .button-group__button {
-            margin-top: 0;
-            margin-right: 30px;
-          }
-        }
-      }
       .__section_img {
         img {
           margin-top: -184px;

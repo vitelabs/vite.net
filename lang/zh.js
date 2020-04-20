@@ -37,7 +37,8 @@ export default {
     `,
     ios: 'iOS 下载',
     android: '安卓下载',
-    learnMore: '了解更多'
+    learnMore: '了解更多',
+    qr: '扫码下载'
   },
   vitePlus: {
     title: 'VitePlus 防疫物资溯源平台',
