@@ -13,7 +13,7 @@
           <b-nav-item v-for="link in links" :key="link.name" :href="link.url" right>
             {{ $t(`nav.${link.name}`) }}
           </b-nav-item>
-          <b-nav-item-dropdown class="__lang_select" text="选择语言" right>
+          <b-nav-item-dropdown class="__lang_select" :text="$t('lang')" right>
             <nuxt-link
               v-for="locale in availableLocales"
               :key="locale.code"

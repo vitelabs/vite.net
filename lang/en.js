@@ -1,5 +1,6 @@
 export default {
   title: 'Vite - World-First DAG Based Blockchain with Smart Contract Capability',
+  lang: 'English',
   meta: {
     description: 'World-First DAG Based Blockchain with Smart Contract Capability'
   },

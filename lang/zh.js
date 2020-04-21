@@ -1,5 +1,6 @@
 export default {
   title: 'Vite - 全球首个基于DAG实现智能合约公链',
+  lang: '中文',
   meta: {
     description: '全球首个基于DAG实现智能合约公链'
   },

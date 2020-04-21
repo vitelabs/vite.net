@@ -21,7 +21,7 @@
     <div id="vitex" class="landing-section vitex">
       <b-container class="position-relative">
         <div class="text-center">
-          <img class="mx-auto section__img img-fluid" src="@/assets/images/vitex@2x.png">
+          <img class="mx-auto section__img img-fluid" :src="imgUrls.vitex">
         </div>
         <b-row class="section-content">
           <div class="section-content__title mx-auto">
@@ -75,9 +75,10 @@
                 id="popover-wallet-qr"
                 class="btn button-group__button btn-secondary"
                 href="javascript:void(0)"
-              >{{ $t('app.qr') }}
+              >
+                {{ $t('app.qr') }}
                 <b-popover target="popover-wallet-qr" triggers="hover" placement="top">
-                  <img style="width: 100%" src="@/assets/images/qr-wallet.png" alt="">
+                  <img style="width: 100%" src="@/assets/images/qr-wallet.png" alt>
                 </b-popover>
               </a>
               <a
@@ -88,7 +89,7 @@
             </b-row>
           </b-col>
           <b-col lg="auto" xs="12" sm="12" class="__section_img">
-            <img class="img-fluid" src="@/assets/images/wallet@2x.png" alt="Vite Wallet">
+            <img class="img-fluid" :src="imgUrls.wallet" alt="Vite Wallet">
           </b-col>
         </b-row>
       </b-container>
@@ -113,7 +114,7 @@
           </div>
         </b-row>
         <div class="text-center">
-          <img class="mx-auto section__img_buttom img-fluid" src="@/assets/images/vite_plus@2x.png">
+          <img class="mx-auto section__img_buttom img-fluid" :src="imgUrls.vitePlus">
         </div>
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
       </b-container>
@@ -143,7 +144,7 @@
           </div>
         </b-row>
         <div class="text-center">
-          <img class="mx-auto section__img_buttom img-fluid" src="@/assets/images/explorer@2x.png">
+          <img class="mx-auto section__img_buttom img-fluid" :src="imgUrls.explorer">
         </div>
       </b-container>
     </div>
@@ -168,7 +169,7 @@
         <div class="text-center">
           <img
             class="mx-auto section__img_buttom img-fluid"
-            src="@/assets/images/web_wallet@2x.png"
+            :src="imgUrls.webWallet"
           >
         </div>
         <img class="block_img" src="@/assets/images/block@2x.png" alt>
@@ -194,7 +195,7 @@
           </div>
         </b-row>
         <div class="text-center">
-          <img class="mx-auto section__img_buttom img-fluid" src="@/assets/images/forum@2x.png">
+          <img class="mx-auto section__img_buttom img-fluid" :src="imgUrls.forum">
         </div>
       </b-container>
     </div>
@@ -203,6 +204,25 @@
 
 <script>
 import Nav from '@/components/Nav.vue'
+
+const imgUrlsMap = {
+  zh: {
+    vitex: require('@/assets/images/vitex@2x.png'),
+    wallet: require('@/assets/images/wallet@2x.png'),
+    vitePlus: require('@/assets/images/vite_plus@2x.png'),
+    explorer: require('@/assets/images/explorer@2x.png'),
+    webWallet: require('@/assets/images/web_wallet@2x.png'),
+    forum: require('@/assets/images/forum@2x.png')
+  },
+  en: {
+    vitex: require('@/assets/images/vitex_en@2x.png'),
+    wallet: require('@/assets/images/wallet_en@2x.png'),
+    vitePlus: require('@/assets/images/explorer_en@2x.png'),
+    explorer: require('@/assets/images/explorer_en@2x.png'),
+    webWallet: require('@/assets/images/web_wallet_en@2x.png'),
+    forum: require('@/assets/images/forum@2x.png')
+  }
+}
 
 export default {
   components: { Nav },
@@ -224,6 +244,11 @@ export default {
         forumWallet: 'https://forum.vite.net/category/36/vite-wallet'
       }
     }
+  },
+  computed: {
+    imgUrls () {
+      return imgUrlsMap[this.$i18n.locale] || imgUrlsMap.en
+    }
   }
 }
 </script>
@@ -232,9 +257,9 @@ export default {
 @import "~assets/css/vars.scss";
 
 .section-content__content {
-    p {
-      margin-bottom: 0;
-    }
+  p {
+    margin-bottom: 0;
+  }
 }
 </style>
 
@@ -346,7 +371,7 @@ export default {
     }
   }
   .section-content__content {
-    font-family:PingFangSC-Regular,PingFang SC;
+    font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     line-height: 30px;
     color: rgba(84, 86, 90, 1);
@@ -543,10 +568,10 @@ export default {
         padding-bottom: 127px;
       }
       .button-group {
-          .button-group__button {
-            margin-top: 15px;
-            margin-right: 20px;
-          }
+        .button-group__button {
+          margin-top: 15px;
+          margin-right: 20px;
+        }
       }
       .__section_img {
         margin-bottom: 0;
@@ -563,10 +588,8 @@ export default {
           margin-top: -100px;
         }
       }
-      .section-content {
-        .button-group {
-          justify-content: space-between;
-        }
+      .button-group {
+        justify-content: space-between;
       }
     }
     @include media-breakpoint-up(xl) {
@@ -575,6 +598,9 @@ export default {
         img {
           margin-top: -184px;
         }
+      }
+      .button-group {
+        justify-content: start;
       }
     }
   }

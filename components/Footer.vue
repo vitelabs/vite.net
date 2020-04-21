@@ -110,6 +110,7 @@ export default {
         { name: 'harmony', url: 'https://harmony.one/' },
         { name: 'ankr', url: 'https://www.ankr.com/' },
         { name: 'hashfin', url: 'https://www.hashfin.com/zh-CN/' },
+        { name: 'hash', url: 'https://www.hashquark.io/' },
         { name: 'vgate', url: 'https://vgate.io/' },
         { name: 'syra', url: 'http://www.syrgov.net/home.aspx' },
         { name: 'bi23', url: 'https://www.bi23.com/#/' },
