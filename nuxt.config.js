@@ -95,12 +95,6 @@ export default {
         file: 'en.js',
         iso: 'en',
         name: 'English'
-      },
-      {
-        code: 'zh',
-        file: 'zh.js',
-        iso: 'zh',
-        name: '中文'
       }
     ],
     lazy: true,

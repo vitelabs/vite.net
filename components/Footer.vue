@@ -9,37 +9,6 @@
           <a v-for="item in urlList" :key="item.name" class="footer__navitem" :href="item.url"> {{ $t(`nav.${item.name}`) }} </a>
         </b-col>
       </b-row>
-      <b-row>
-        <b-col cols="12" class="footer__subtitle">
-          {{ $t('footer.investor') }}
-        </b-col>
-        <b-col cols="12" class="list d-flex justify-content-start flex-wrap">
-          <a v-for="item in investorList" :key="item.name" :href="item.url" target="_blank">
-            <img class="footer__img" :src="`/images/investors/${item.name}@2x.png`" :alt="item.name">
-          </a>
-        </b-col>
-        <b-col cols="12" class="footer__subtitle">
-          {{ $t('footer.partner') }}
-        </b-col>
-        <b-col cols="12" class="list d-flex justify-content-start  flex-wrap">
-          <a v-for="item in partnerList" :key="item.name" :href="item.url" target="_blank">
-            <img class="footer__img" :src="`/images/partners/${item.name}@2x.png`" :alt="item.name">
-          </a>
-        </b-col>
-        <b-col cols="12">
-          <div class="footer__line" />
-        </b-col>
-        <b-col class="list d-flex justify-content-center justify-content-lg-between flex-wrap">
-          <a v-for="item in iconUrlList" :id="`popover-${item.name}`" :key="item.name" :href="item.url">
-            <icon :name="item.name" />
-          </a>
-        </b-col>
-        <div>
-          <b-popover target="popover-wechat" triggers="click" placement="top">
-            <img style="width: 100%" src="@/assets/images/wxCode.png" alt="">
-          </b-popover>
-        </div>
-      </b-row>
       <b-row class="copy-right">
         <b-col>
           © 2020 VITE Labs. All Rights Reserved.
@@ -53,6 +22,7 @@
 import Icon from './Icon'
 
 export default {
+  // eslint-disable-next-line vue/no-unused-components
   components: { Icon },
   data () {
     return {

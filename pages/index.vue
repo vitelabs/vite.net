@@ -94,31 +94,6 @@
         </b-row>
       </b-container>
     </div>
-    <div id="vite_plus" class="landing-section vite_plus">
-      <b-container class="position-relative">
-        <b-row class="section-content">
-          <div class="section-content__title mx-auto">
-            {{ $t('vitePlus.title') }}
-          </div>
-        </b-row>
-        <b-row class="section-content">
-          <div class="section-content__content mx-auto" v-html="$t('vitePlus.description')" />
-        </b-row>
-        <b-row class="section-content">
-          <div class="mx-auto button-group">
-            <a
-              class="btn button-group__button btn-secondary"
-              :href="urls.vitePlus"
-              target="_blank"
-            >{{ $t('vitePlus.learnMore') }}</a>
-          </div>
-        </b-row>
-        <div class="text-center">
-          <img class="mx-auto section__img_buttom img-fluid" :src="imgUrls.vitePlus">
-        </div>
-        <img class="block_img" src="@/assets/images/block@2x.png" alt>
-      </b-container>
-    </div>
     <div id="vite_explorer" class="landing-section vite_explorer">
       <b-container>
         <b-row class="section-content">
